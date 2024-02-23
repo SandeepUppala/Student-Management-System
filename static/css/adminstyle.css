@@ -1,0 +1,128 @@
+
+.button {
+  position: relative;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 10px;
+  width: 180px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.body {
+  background-image :url("{% static 'images/pfsd3.jpg' %}");
+  background-image :url("{% static 'images/pfsd1.jpg' %}");
+  background-image: url("{% static 'images/pfsd2.jpg' %}");
+  background-image :url("{% static 'images/pfsd6.jpeg' %}");
+  background-image :url("{% static 'images/pfsd7.jpeg' %}");
+  background-image :url("{% static 'images/pfsd8.jpeg' %}");
+  background-size: cover;
+  background-position: center;
+}
+
+.buttonafter {
+content:"";
+background:#f1f1f1;
+display:block;
+position:absolute;
+padding-top:300%;
+padding-left:350%;
+margin-left:-20px !important;
+margin-top : -120%;
+opacity :0;
+transition:all 0.8s
+}
+
+/* Shared button styles */
+.button {
+  display: inline-block; /* Allow inline positioning */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* Add rounded corners */
+  width:200px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green hover color */
+  color: white;
+}
+
+.add-student-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.view-student-button {
+  background-color: #00BCD4; /* Blue */
+  color: white;
+}
+
+.update-student-button {
+  background-color: #FF9800; /* Orange */
+  color: white;
+}
+
+.delete-student-button {
+  background-color: #F44336; /* Red */
+  color: white;
+}
+
+
+
+.button:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+}
+
+.button {
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.navbar {
+  background-color: #555; /* Darker background for contrast */
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  text-align: center;
+}
+
+.navbar a {
+  color: #fff; /* White text for readability */
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #333; /* Darker hover effect */
+}
+
+.navbar a {
+  margin-right: 10px; /* Space between links */
+}
+
+.navbar a:last-child {
+  margin-right: 0; /* Remove margin for the last link */
+}
+
+@media (max-width: 768px) {
+  .navbar a {
+    display: block; /* Stack links on smaller screens */
+    margin-bottom: 5px; /* Add spacing between stacked links */
+  }
+}
+
+

@@ -1,0 +1,58 @@
+{% extends 'adminhome.html' %}
+
+{% block 'body' %}
+
+<h2 align="center" style="color : red">{{message}}</h2>
+
+<h3 align = "center"><u>Change Password</u></h3><br>
+<center>
+<form method="post" action="{% url 'adminupdatepwd' %}">
+    {% csrf_token %}
+    <table align = "center" width="25%" height="25%">
+        <tr>
+            <td>
+                <lable>Enter Old Password </lable>
+            </td>
+            <td>
+                <input type = "text" name = "opwd" required />
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+
+
+
+         <tr>
+            <td>
+                <lable>Enter New Password </lable>
+            </td>
+            <td>
+                <input type = "password" name = "npwd" required />
+            </td>
+        </tr>
+
+
+         <tr>
+             <td>
+                <input type = "reset" value = "Clear" class="button"/>
+            </td>
+             <td align = "center">
+                <input type = "submit" value = "Update" class="button"/>
+            </td>
+        </tr>
+
+    </table>
+</form>
+
+    </center>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PFSD BASICS SMS PROJECT </title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/adminstyle.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/studentstyle.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+    </style>
+
+
+</head>
+<h2 align = "center">Student Academic Management System</h2>
+<br>
+<div class="navbar">
+<a href = "{% url 'studenthome' %}"> Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "{% url 'studentchangepwd' %}"> Change Password</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{% url 'studentcourses' %}">View Courses</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="{% url 'studentcoursecontent' %}">View Course Content</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "{% url 'studentlogin' %}"> Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<h3 align="right" style="color : green"><i>Welcome {{sid}}</i></h3>
+
+
+{% block 'body' %}
+<center>
+<div class="card">
+  <div class="container">
+    <h4><b>{{student.student_id}} - {{student.FullName}}</b></h4>
+        <p>{{student.department}}</p>
+        <p>{{student.year}} year - {{student.semester}} semester</p>
+        <p>{{student.Program}}</p>
+        <p>{{student.Email}}</p>
+        <p>{{student.contact}}</p>
+  </div>
+</div>
+    </center>
+<center>
+<body background="{% static 'images/pfsd7.jpg' %}" style="background-size: cover; background-position: center;">
+
+    </center>
+
+{% endblock %}
+
+
+</body>
+
+</html>

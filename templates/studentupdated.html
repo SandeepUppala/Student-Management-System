@@ -1,0 +1,28 @@
+{% extends 'adminhome.html' %}
+
+{% block 'body' %}
+
+<h2 align="center" style="color :red">{{msg}}</h2>
+<h3 align="center" style="color: black"><u>Update Student</u></h3>
+<center>
+<form method="POST">
+    {% csrf_token %}
+<table align="center" width="30%" height="50%">
+    {% for field in form %}
+    <tr>
+        <td><label>{{field.label}}</label></td>
+         <td>{{field}}</td>
+        <td></td>
+    </tr>
+    {% endfor %}
+
+    <tr>
+        <td><input type="submit" value="Update" class="button"></td>
+        <td><input type="reset" value="Clear" class="button"></td>
+    </tr>
+</table>
+</form>
+    </center>
+
+{% endblock %}
+

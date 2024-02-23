@@ -1,0 +1,47 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PFSD BASICS SMS PROJECT </title>
+     <center>
+<body background="{% static 'images/pfsd7.jpg' %}" style="background-size: cover; background-position: center;">
+    </center>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link type = "text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<h2 align = "center"style="color: black; font-size: 40px;">Student Academic Management System</h2><br>
+
+<nav class="navbar">
+     <div class="logo">
+         <img src="{% static 'images/logo.png' %}" alt="Logo" style="width: 75px; height: 75px;">
+         <b style="color: black; font-size: 30px;"><i>SMS</i></b>
+     </div>
+     <ul class="nav-links">
+         <div class="menu" >
+<li><a href = " {% url 'home' %}" style="color : black"><b> Home</b></a>&nbsp;&nbsp;&nbsp;</li>
+<li><a href = "{% url 'about' %} " style="color : black"> <b>About Project</b></a>&nbsp;&nbsp;&nbsp;</li>
+<li class="services">
+    <a href = "{% url 'login' %} " style="color : black"><b> Login</b></a>
+
+     <ul class="dropdown">
+            <li><a href="{% url 'studentlogin' %}">Student </a></li>
+            <li><a href="{% url 'facultylogin' %}">Faculty</a></li>
+            <li><a href="{% url 'login' %}">Admin</a></li>
+          </ul>
+
+    &nbsp;&nbsp;&nbsp;</li>
+
+<li><a href = "{% url 'contact' %} " style="color : black"><b>Contact us</b></a>&nbsp;&nbsp;&nbsp;</li>
+         </div>
+     </ul>
+</nav>
+{% block 'body' %}
+
+
+{% endblock %}
+
+</body>
+
+</html>

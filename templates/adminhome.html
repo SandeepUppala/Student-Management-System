@@ -1,0 +1,49 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PFSD BASICS SMS PROJECT </title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/adminstyle.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <center>
+<body background="{% static 'images/pfsd7.jpg' %}" style="background-size: cover; background-position: center;">
+    </center>
+
+    <style>
+        body {
+            background-color: lightgrey;              #addning bg color
+        }
+    </style>
+
+
+</head>
+<body bgcolor="lightgrey">
+<h2 align = "center" style="color : black">Student Academic Management System</h2>
+<br>
+
+<div class="navbar">
+<a href = "{% url 'adminhome' %}" > Home</a>&nbsp;&nbsp;&nbsp;
+<a href = "{% url 'adminchangepwd' %}"> Change Password</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "{% url 'adminstudents' %}"> Student</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "{% url 'adminfaculty' %}"> Faculty</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "{% url 'admincourses' %}"> Course</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "{% url 'facultycoursemapping' %}"> Faculty Course Mapping</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href = "{% url 'login' %}"> Logout</a>&nbsp;&nbsp;&nbsp;
+</div>
+
+
+<h3 align="right" style="color : green"><i>Welcome {{adminuname}}</i></h3>
+<br><br>
+
+{% block 'body' %}
+
+<p>I am in Admin HomePage</p>
+
+{% endblock %}
+
+
+</body>
+
+</html>
